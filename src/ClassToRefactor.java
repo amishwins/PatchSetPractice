@@ -1,4 +1,3 @@
-
 public class ClassToRefactor {
 	
 	private String _name;
