@@ -8,6 +8,10 @@ public class ClassToRefactor {
 		_state = false; 
 	}
 	
+	public String formattedResponse() {
+		return getName() + " " + "hello";
+	}
+	
 	public void setClassField(String newName, Boolean newState ) {
 		setName(newName);
 		setState(newState);

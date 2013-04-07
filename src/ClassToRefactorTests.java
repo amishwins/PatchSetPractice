@@ -50,4 +50,10 @@ public class ClassToRefactorTests {
 		cut.setClassField("", false);
 		assertTrue("State incorrect", cut.getState() == true);
 	}	
+	
+	@Test
+	public void verifyBlankFormattedReponse() {
+		assertTrue("State incorrect", cut.formattedResponse().equals("Large Method hello"));
+	}
+	
 }
