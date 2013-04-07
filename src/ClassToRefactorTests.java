@@ -61,5 +61,10 @@ public class ClassToRefactorTests {
 		cut.setClassField("b", false);
 		assertTrue("State incorrect", cut.formattedResponse().equals("b hello"));
 	}
+
+	@Test
+	public void verifyDefaultCheeze() {
+		assertTrue("State incorrect", cut.cheeze().equals("Large Method cheeze!"));
+	}
 	
 }
