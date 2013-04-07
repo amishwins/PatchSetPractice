@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-
+// comments
 public class ClassToRefactorTests {
 
 	private ClassToRefactor cut; 
