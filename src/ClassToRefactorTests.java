@@ -52,8 +52,14 @@ public class ClassToRefactorTests {
 	}	
 	
 	@Test
-	public void verifyBlankFormattedReponse() {
+	public void verifyDefaultFormattedReponse() {
 		assertTrue("State incorrect", cut.formattedResponse().equals("Large Method hello"));
+	}
+
+	@Test
+	public void verifyModifiedFormattedReponse() {
+		cut.setClassField("b", false);
+		assertTrue("State incorrect", cut.formattedResponse().equals("b hello"));
 	}
 	
 }
