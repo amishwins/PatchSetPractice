@@ -8,6 +8,7 @@ import org.junit.Test;
 public class ClassToRefactorTests {
 
 	private ClassToRefactor cut; 
+	
 	@Before
 	public void setUp() throws Exception {
 		cut = new ClassToRefactor();
@@ -25,29 +26,28 @@ public class ClassToRefactorTests {
 	
 	@Test
 	public void newNameAndStillFalse() {
-		cut.methodToRefactorBecauseItsTooLong("Soon to be refactored", false);
+		cut.setClassField("Soon to be refactored", false);
 		assertTrue("Name incorrect", cut.getName().equals("Soon to be refactored"));
-		assertTrue("State incorrect", cut.getState() == false);		
+		assertTrue("State incorrect", cut.getState() == false);	
 	}
 	
 	@Test
 	public void emptyNameAndStillFalse() {
-		cut.methodToRefactorBecauseItsTooLong("", false);
+		cut.setClassField("", false);
 		assertTrue("Name incorrect", cut.getName().equals("Large Method"));
 		assertTrue("State incorrect", cut.getState() == false);				
 	}
 
 	@Test
 	public void emptyNameAndNowTrue() {
-		cut.methodToRefactorBecauseItsTooLong("", true);
+		cut.setClassField("", true);
 		assertTrue("State incorrect", cut.getState() == true);				
 	}
 
 	@Test
 	public void setStateToTrueThenFalseButRemainsTrue() {
-		cut.methodToRefactorBecauseItsTooLong("", true);
-		cut.methodToRefactorBecauseItsTooLong("", false);
+		cut.setClassField("", true);
+		cut.setClassField("", false);
 		assertTrue("State incorrect", cut.getState() == true);
-	}
-	
+	}	
 }

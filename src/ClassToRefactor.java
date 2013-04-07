@@ -8,12 +8,18 @@ public class ClassToRefactor {
 		_state = false; 
 	}
 	
-	public void methodToRefactorBecauseItsTooLong(String newName, Boolean newState ) {
-		// this method is large! let's refactor into two separate (private) methods
+	public void setClassField(String newName, Boolean newState ) {
+		setName(newName);
+		setState(newState);
+	}
+
+	private void setName(String newName) {
 		if (newName != null && !newName.isEmpty()) {
 			_name = newName;
 		}
-		
+	}
+
+	private void setState(Boolean newState) {
 		if (newState == true) {
 			_state = newState;				
 		}
