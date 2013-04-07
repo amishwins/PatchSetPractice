@@ -29,7 +29,7 @@ public class ClassToRefactor {
 
 	private void setState(Boolean newState) {
 		if (newState == true) {
-			_state = newState;				
+			_state = newState;
 		}
 	}
 	
