@@ -12,6 +12,10 @@ public class ClassToRefactor {
 		return getName() + " " + "hello";
 	}
 	
+	public String cheeze() {
+		return getName() + " " + "cheeze!";
+	}
+	
 	public void setClassField(String newName, Boolean newState ) {
 		setName(newName);
 		setState(newState);
